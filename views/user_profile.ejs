@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile!</title>
+        <link rel="icon" type="image/x-icon" href="/uploads/images/S.png">
+        <!-- <link rel="stylesheet" href="/css/user_profile.css"> -->
+
+        <link rel="stylesheet" media="screen and (min-width: 750px)" href="/css/user_profile.css">
+        <link rel="stylesheet" media="screen and (max-width: 750px)" href="/css/user_profile_mobile.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,800;1,100;1,500&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <!-- for desktop -->
+    <body>
+        <%- include('_header') %>
+        <div id="desktop-profile">
+            <div id="top-div">
+                <div id="top-images">
+                    <img id="cover-image" src="/uploads/images/cover.jpg" alt="cover image"> 
+                </div>
+                <div id="top-middle">
+                    <div id="profile-pic">
+                        <% if(!profile_user.avatar) { %>
+                            <img src="/uploads/users/avatars/profilepic.png" alt="profile pic" height="140px" width="140px" style="border-radius: 50%;">
+                        <% } else { %>
+                            <img src="<%=profile_user.avatar%>" alt="profile pic" height="140px" width="140px" style="border-radius: 50%;">
+                        <% } %> 
+                    </div>
+                    <div id="name">
+                        <%=profile_user.name %>
+                    </div>  
+                    <% if(user.id == profile_user.id) { %>
+                        <div class="signoutfriendReq">
+                            <a href="/signout">Signout</a>
+                        </div>
+                    <% } %>
+                    <% if(user.id != profile_user.id && !isFriend && !requestSent){%>
+                        <div class="signoutfriendReq">
+                            <a href="/notifications/sendRequest/<%=person_id%>" id="send_request">Send Friend Request</a>
+                        </div>
+                    <%}%>
+                </div>
+                <div id="options-list">
+                    <div>
+                        <ul data-userid = "<%=profile_user.id%>" id="posts-button" class="border-selected">
+                            <a href="">Posts</a>
+                        </ul>
+                        <% if(user.id == profile_user.id) { %>
+                            <ul id="update-button" data-userid="<%=profile_user.id%>"><a href="">Update</a></ul>
+                        <% } %>
+                        <ul id="friends-list" class="border-selected" data-userid="<%=profile_user.id%>"><a href="">Friends</a></ul>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom-content">
+                <div id="friends-listbox">
+                </div>
+            </div> 
+        </div>
+    </body>
+
+    <script>
+        <% if (flash.success && flash.success.length > 0) { %>
+            new Noty({
+                theme: 'sunset',
+                text: '<%= flash.success %>',
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500
+            }).show();
+        <% } %>
+        <% if (flash.error && flash.error.length > 0) { %>
+                new Noty({
+                    theme: 'sunset',
+                    text: '<%= flash.error %>',
+                    type: 'error',
+                    layout: 'topRight',
+                    timeout: 1500
+                }).show();
+        <% } %>
+    </script>
+    <script src="/js/user_profile.js"></script>
+</html>

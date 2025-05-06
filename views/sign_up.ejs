@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Sign Up!
+        </title>
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/signin.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,800;1,100;1,500&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <%- include('_header') %>
+        <div id="heading">
+            Sign Up to Join Others!
+        </div>
+        <div id="loginupForm">
+            <form action="/create" method="post">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your E-mail" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="password" name="cpassword" placeholder="Confirm Password" required><br>
+                <input type="submit" value="Sign Up">           
+            </form>
+        </div>
+        <div id="bottomOptionsLogin">
+            <p><a href="/forgotpassword">Forgot Password?</a></p>
+            <p><a href="/auth/google">SignUp with Google!</a></p>
+        </div>
+    </body>
+        <script>
+            <% if (flash.success && flash.success.length > 0) { %>
+                new Noty({
+                    theme: 'sunset',
+                    text: '<%= flash.success %>',
+                    type: 'success',
+                    layout: 'topRight',
+                    timeout: 1500
+                }).show();
+            <% } %>
+            <% if (flash.error && flash.error.length > 0) { %>
+                    new Noty({
+                        theme: 'sunset',
+                        text: '<%= flash.error %>',
+                        type: 'error',
+                        layout: 'topRight',
+                        timeout: 1500
+                    }).show();
+            <% } %>
+        </script>
+</html>

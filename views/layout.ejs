@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" media="screen and (min-width: 750px)" href="css/home_style.css">
+    <link rel="stylesheet" media="screen and (max-width: 750px)" href="css/home_style_mobile.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" media="screen and (min-width: 750px)" href="/css/chat_box.css">
+    <link rel="stylesheet" media="screen and (max-width: 750px)" href="/css/chat_box_mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,800;1,100;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="icon" type="image/x-icon" href="../uploads/images/S.png">
+</head>
+<body>
+    <%- include('_header'); %>
+    <div id="home-layout">
+        <div id="left">
+                <%- include('_left_pane') %>      
+        </div>
+        <div id="layout-main">
+            <%- include('home') %>
+        </div>
+        <div id="right">
+            <%- include('_right_pane') %>  
+        </div>
+    </div>
+    <%- include('_chat_box') -%>
+</body>
+
+<script>
+    <% if (flash.success && flash.success.length > 0) { %>
+        new Noty({
+            theme: 'sunset',
+            text: '<%= flash.success %>',
+            type: 'success',
+            layout: 'topRight',
+            timeout: 1500
+        }).show();
+    <% } %>
+    <% if (flash.error && flash.error.length > 0) { %>
+        new Noty({
+            theme: 'sunset',
+            text: '<%= flash.error %>',
+            type: 'error',
+            layout: 'topRight',
+            timeout: 1500
+        }).show();
+    <% } %>
+</script>
+<!-- <script src="/js/chat_box.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.min.js"></script>
+<script src="/js/chat_engine.js"></script>
+<script src="/js/mobile_responsive.js"></script>
+<% if(locals.user) { %>
+    <script>
+        new chatEngine('user-chat-box', '<%=locals.user.name%>', '<%=locals.user.id%>')
+    </script>
+<% } %>
+</html>

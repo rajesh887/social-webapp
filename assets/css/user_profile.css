@@ -1,0 +1,261 @@
+html {
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+  background-color: #1c1d20;
+  font-family: 'Montserrat', sans-serif;
+  color: white; }
+  body #mobile-profile {
+    display: none; }
+  body #desktop-profile {
+    padding: 0 30px; }
+    body #desktop-profile #top-div #top-images {
+      height: 350px; }
+      body #desktop-profile #top-div #top-images #cover-image {
+        border-radius: 10px 10px 0 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+    body #desktop-profile #top-div #top-middle {
+      position: relative;
+      height: 100px;
+      background-color: #242526;
+      border-radius: 0 0 5px 5px; }
+      body #desktop-profile #top-div #top-middle #profile-pic {
+        position: absolute;
+        top: 0;
+        left: 2vw;
+        transform: translateY(-50%); }
+        body #desktop-profile #top-div #top-middle #profile-pic img {
+          border: solid #242526 5px;
+          height: 170px;
+          width: 170px;
+          object-fit: cover; }
+      body #desktop-profile #top-div #top-middle #name {
+        position: absolute;
+        margin-left: 225px;
+        margin-top: 22px;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        color: #dccece; }
+      body #desktop-profile #top-div #top-middle .signoutfriendReq {
+        position: absolute;
+        display: inline-block;
+        right: 66px;
+        margin-top: 22px; }
+        body #desktop-profile #top-div #top-middle .signoutfriendReq a {
+          text-decoration: none;
+          font-size: 24px;
+          color: #777676;
+          transition-duration: .2s; }
+        body #desktop-profile #top-div #top-middle .signoutfriendReq a:hover {
+          text-decoration: none;
+          font-size: 26px;
+          color: #bdb6b6; }
+    body #desktop-profile #top-div #options-list {
+      width: 95%;
+      margin-left: 50%;
+      border-radius: 0 0 5px 5px;
+      transform: translateX(-50%);
+      background-color: #242526;
+      border-top: solid #494949 2px; }
+      body #desktop-profile #top-div #options-list div {
+        display: flex;
+        justify-content: space-around; }
+        body #desktop-profile #top-div #options-list div ul {
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+          text-align: center;
+          display: inline-block;
+          border-radius: 0 0 5px 5px;
+          transition-duration: 0.2s;
+          cursor: pointer; }
+          body #desktop-profile #top-div #options-list div ul a {
+            text-decoration: none;
+            color: white; }
+        body #desktop-profile #top-div #options-list div ul:hover {
+          width: 100%;
+          text-align: center;
+          display: inline-block;
+          background-color: #77767627; }
+    body #desktop-profile #bottom-content {
+      display: block;
+      margin-bottom: 150px; }
+      body #desktop-profile #bottom-content .center {
+        height: 432px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      body #desktop-profile #bottom-content .wave {
+        height: 36px;
+        width: 2px;
+        background: linear-gradient(45deg, #cf01ff, #fff);
+        margin: 3px;
+        animation: wave 1s linear infinite;
+        border-radius: 20px; }
+      body #desktop-profile #bottom-content .wave:nth-child(2) {
+        animation-delay: 0.1s; }
+      body #desktop-profile #bottom-content .wave:nth-child(3) {
+        animation-delay: 0.2s; }
+      body #desktop-profile #bottom-content .wave:nth-child(4) {
+        animation-delay: 0.3s; }
+      body #desktop-profile #bottom-content .wave:nth-child(5) {
+        animation-delay: 0.4s; }
+      body #desktop-profile #bottom-content .wave:nth-child(6) {
+        animation-delay: 0.5s; }
+      body #desktop-profile #bottom-content .wave:nth-child(7) {
+        animation-delay: 0.6s; }
+      body #desktop-profile #bottom-content .wave:nth-child(8) {
+        animation-delay: 0.7s; }
+      body #desktop-profile #bottom-content .wave:nth-child(9) {
+        animation-delay: 0.8s; }
+      body #desktop-profile #bottom-content .wave:nth-child(10) {
+        animation-delay: 0.9s; }
+
+@keyframes wave {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+      body #desktop-profile #bottom-content #post-content {
+        margin-left: 3rem; }
+      body #desktop-profile #bottom-content .likeToggle {
+        color: #92c221;
+        text-decoration: none;
+        cursor: pointer; }
+      body #desktop-profile #bottom-content ul {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 60%; }
+        body #desktop-profile #bottom-content ul a {
+          border-bottom: #3a3b3c solid 0px;
+          transition-duration: .1s; }
+        body #desktop-profile #bottom-content ul a:hover {
+          border-bottom: #3a3b3c solid 1px; }
+        body #desktop-profile #bottom-content ul a:active {
+          color: inherit; }
+        body #desktop-profile #bottom-content ul #likes {
+          transition-duration: .1s; }
+      body #desktop-profile #bottom-content p {
+        margin: 0; }
+      body #desktop-profile #bottom-content #posts {
+        color: #bea7a7; }
+      body #desktop-profile #bottom-content #likes {
+        color: #979797; }
+      body #desktop-profile #bottom-content .box {
+        background-color: #131313;
+        color: #131313;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 45px -10px #8e27c5; }
+        body #desktop-profile #bottom-content .box .avatar-info {
+          display: flex;
+          height: 65px; }
+          body #desktop-profile #bottom-content .box .avatar-info .post-avatar {
+            height: 55px;
+            width: 55px; }
+            body #desktop-profile #bottom-content .box .avatar-info .post-avatar img {
+              height: 100%;
+              width: 100%;
+              border-radius: 50%; }
+          body #desktop-profile #bottom-content .box .avatar-info .username-datetime {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px; }
+            body #desktop-profile #bottom-content .box .avatar-info .username-datetime .post-user-name {
+              font-size: 25px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #d5d7d8; }
+            body #desktop-profile #bottom-content .box .avatar-info .username-datetime .post-datetime {
+              font-size: 14px;
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #6b6e6f; }
+        body #desktop-profile #bottom-content .box .post-Image-Container {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 10px; }
+          body #desktop-profile #bottom-content .box .post-Image-Container .post-attachment {
+            border-radius: 10px;
+            outline: #6d6666 1px solid;
+            max-height: 60vh;
+            width: auto;
+            overflow: hidden; }
+        body #desktop-profile #bottom-content .box #post-content {
+          font-size: 19px;
+          color: silver; }
+      body #desktop-profile #bottom-content #border {
+        border-top: 1px solid #5d6160;
+        width: 100%;
+        margin: .5vw 4.2vw .5vw 0vw; }
+      body #desktop-profile #bottom-content #updation-form {
+        margin-left: 50%;
+        transform: translateX(-50%); }
+        body #desktop-profile #bottom-content #updation-form #update-form {
+          background-color: #242526;
+          width: 60vw;
+          margin-left: 50%;
+          transform: translateX(-50%);
+          margin-top: 100px;
+          border-radius: 15px;
+          padding: 34px;
+          text-align: center;
+          box-shadow: rgba(193, 9, 244, 0.25) 0px 25px 50px -12px; }
+          body #desktop-profile #bottom-content #updation-form #update-form input {
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #3a3b3c;
+            color: #8e27c5;
+            margin-top: 20px;
+            transition-duration: 0.1s;
+            border: none;
+            outline: none; }
+          body #desktop-profile #bottom-content #updation-form #update-form input:hover {
+            padding: 12px; }
+          body #desktop-profile #bottom-content #updation-form #update-form ::placeholder {
+            color: #898784;
+            font-size: 15px;
+            font-weight: lighter; }
+          body #desktop-profile #bottom-content #updation-form #update-form form {
+            color: #757599;
+            width: 100%;
+            text-align: center; }
+      body #desktop-profile #bottom-content #friends-listbox {
+        margin-top: 20px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        justify-content: space-between; }
+        body #desktop-profile #bottom-content #friends-listbox .friend-box {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px;
+          width: 150px;
+          margin-right: 60px; }
+          body #desktop-profile #bottom-content #friends-listbox .friend-box img {
+            height: 70px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 10px; }
+          body #desktop-profile #bottom-content #friends-listbox .friend-box #name-field {
+            position: relative;
+            font-size: 19px;
+            text-align: left; }
+            body #desktop-profile #bottom-content #friends-listbox .friend-box #name-field div {
+              position: absolute;
+              width: 160px;
+              top: 50%;
+              transform: translateY(-50%); }
+              body #desktop-profile #bottom-content #friends-listbox .friend-box #name-field div a {
+                text-decoration: none;
+                color: white; }

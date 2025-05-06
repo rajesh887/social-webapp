@@ -1,0 +1,244 @@
+.center {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.wave {
+  height: 36px;
+  width: 2px;
+  background: linear-gradient(45deg, #cf01ff, #fff);
+  margin: 3px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px; }
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s; }
+
+.wave:nth-child(3) {
+  animation-delay: 0.2s; }
+
+.wave:nth-child(4) {
+  animation-delay: 0.3s; }
+
+.wave:nth-child(5) {
+  animation-delay: 0.4s; }
+
+.wave:nth-child(6) {
+  animation-delay: 0.5s; }
+
+.wave:nth-child(7) {
+  animation-delay: 0.6s; }
+
+.wave:nth-child(8) {
+  animation-delay: 0.7s; }
+
+.wave:nth-child(9) {
+  animation-delay: 0.8s; }
+
+.wave:nth-child(10) {
+  animation-delay: 0.9s; }
+
+@keyframes wave {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+
+header {
+  background-color: #292929e8;
+  padding: .4vw;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1; }
+  header #header {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px; }
+    header #header #title-image {
+      height: 32px;
+      width: 162px; }
+    header #header #loginOptions {
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 145px; }
+      header #header #loginOptions p {
+        display: inline-block;
+        color: #ef41fe; }
+      header #header #loginOptions a {
+        color: #f264ff;
+        text-decoration: none; }
+      header #header #loginOptions a:hover {
+        border-bottom: solid #4c1c78 1px; }
+    header #header #top-right-options {
+      display: flex;
+      justify-content: space-between; }
+      header #header #top-right-options a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 20px;
+        color: #8e27c5;
+        padding: 0;
+        margin: 0; }
+        header #header #top-right-options a:hover {
+          color: #7819ab; }
+      header #header #top-right-options #search-button {
+        display: none; }
+      header #header #top-right-options #profile-page-img {
+        display: none; }
+      header #header #top-right-options #profile-page-text {
+        display: inline-block; }
+      header #header #top-right-options .notification {
+        background-color: #555;
+        color: wrgb(13, 185, 183);
+        text-decoration: none;
+        padding: 5px 16px;
+        position: relative;
+        display: inline-block;
+        border-radius: 2px;
+        margin-right: 20px; }
+      header #header #top-right-options .notification:hover {
+        background: #454040; }
+      header #header #top-right-options .notification .badge {
+        position: absolute;
+        top: 17px;
+        right: -10px;
+        padding: 2px 7px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+        font-size: 15px; }
+    header #header p {
+      margin: 0;
+      padding: 0;
+      font-size: 2.3vh;
+      text-align: left; }
+      header #header p a {
+        font-weight: bold;
+        font-size: 2.1vh;
+        color: black; }
+    header #header #acceptRejectPanel a {
+      font-weight: bold;
+      font-size: 2.1vh;
+      color: black; }
+    header #header #acceptRejectPanel a:hover {
+      font-weight: bold;
+      font-size: 2.1vh;
+      color: #795050;
+      border-bottom: 1px solid black; }
+    header #header #PendingClearPanel a {
+      font-weight: bold;
+      font-size: 2.1vh;
+      color: red; }
+    header #header #PendingClearPanel a:hover {
+      font-weight: bold;
+      font-size: 2.1vh;
+      color: #795050;
+      border-bottom: 1px solid black; }
+  header #notification-box {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    background-color: #4f4f4f;
+    right: 40px;
+    top: 40px;
+    visibility: hidden;
+    transition: .3s ease-out;
+    overflow: scroll;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 13px; }
+    header #notification-box h2 {
+      font-weight: 500; }
+    header #notification-box h3 {
+      font-weight: 400; }
+  header #search-box {
+    background-color: #424143;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    position: absolute;
+    height: 50vh;
+    width: 60vw;
+    border-radius: 3px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.5s; }
+    header #search-box input {
+      font-size: 20px;
+      font-family: 'Montserrat', sans-serif;
+      color: #9e9e9e;
+      width: 80%;
+      border-radius: 2px;
+      margin-top: 20px;
+      background-color: #d2dce514;
+      outline: none;
+      border: none;
+      margin-bottom: 5px; }
+    header #search-box #container {
+      width: 100%;
+      overflow: scroll; }
+      header #search-box #container ul {
+        color: #acacac; }
+        header #search-box #container ul a {
+          text-decoration: none;
+          color: #acacac; }
+  header .container {
+    display: none; }
+  header ::-webkit-scrollbar-corner {
+    background-color: transparent; }
+  @media screen and (max-width: 750px) {
+    header #header {
+      margin-right: 3px !important; }
+    header #title-image {
+      margin-top: 6px;
+      height: 28px !important;
+      width: 145px !important; }
+    header #search-button {
+      display: inline-block !important; }
+      header #search-button img {
+        height: 35px;
+        width: 35px;
+        margin-right: 5px; }
+    header #profile-page-img {
+      display: inline-block !important; }
+      header #profile-page-img img {
+        height: 35px;
+        width: 35px; }
+    header #profile-page-text {
+      display: none !important; }
+    header .notification {
+      padding: 8px 6px !important;
+      margin-right: 4px !important;
+      background-color: transparent !important;
+      font-size: 0 !important;
+      padding: 0 !important; }
+      header .notification .badge {
+        top: 21px !important;
+        right: 1px !important;
+        padding: 2px 5px !important;
+        font-size: 11px !important; }
+    header #notification-box p {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      text-align: left; }
+      header #notification-box p a {
+        font-size: 14px !important; }
+    header #notification-box h2 {
+      font-size: 20px !important; }
+    header #notification-box h3 {
+      font-size: 18px !important; }
+    header #notification-box #acceptRejectPanel a {
+      font-size: 14px !important; }
+    header #notification-box #PendingClearPanel a {
+      font-size: 14px !important; } }
