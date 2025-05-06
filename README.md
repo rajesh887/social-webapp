@@ -1,9 +1,7 @@
 # Socialize
 
-Developed By : Vishal Maharathy
+Developed By : Rajesh Rai
 
-Preview<br />
-![image](https://user-images.githubusercontent.com/81948965/177213993-a7666c93-3bac-477b-9278-5f8a9dcb0dfb.png)
 
 Features:<br />
 🟢 Global Chat<br />
